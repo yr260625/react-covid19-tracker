@@ -11,6 +11,7 @@ const axiosInstance = axios.create({
 });
 
 // API-Keyをヘッダーに追加
+// Todo: APIキー情報をDBから取得する
 axiosInstance.interceptors.request.use((config: AxiosRequestConfig) => {
   config.headers['X-RapidAPI-Key'] = process.env.REACT_APP_COVID19_API_KEY;
   config.headers['X-RapidAPI-Host'] = process.env.REACT_APP_COVID19_API_HOST;
